@@ -1,6 +1,14 @@
+
+/**
+ * 
+ * the <article> is the name of the function
+ * the tags PlusMinus is a component, pass a props of handle to the handle attribute
+ * the name of the section is defined by className
+ * Data will be displayed with the props.data
+ */
 function Article(props){
     return (<>
-        <article> 
+        <article>
             <PlusMinus section="article" handle={props.handle}/>
             <div className="section">Article:{props.data.article}</div>
             <Data data={props.data}/>
