@@ -1,3 +1,8 @@
+/* 
+Define the grid that has a gap of 5px between
+each of the sections that get generated
+*/
+
 .grid{
     display: grid;
     grid-template-columns: 200px 1fr 200px;
@@ -5,10 +10,20 @@
     gap: 5px;
     height: 90vh;
 }
+
+/*
+
+*/
 .section{
   font-size: 2em;
   font-weight: 800;
 }
+
+
+/*
+Give the header, and footer the outlines typically seen
+on classical holy grail apps to get the defined areas
+*/
 header, aside, article, footer{
     border-style: solid;
     font-size: 1em;
