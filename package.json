@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kogsio/react-holygrail#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "http-server": "^13.0.2",
     "redis": "^3.0.2"
   }
 }
