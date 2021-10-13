@@ -8,6 +8,7 @@ React Holy Grail - State of each column shared with the rest
 
 - Http-Server
   - Express 
+  - Node Redis
   - Node JS
 
 - Data Store
