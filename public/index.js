@@ -1,3 +1,5 @@
+
+// handling event to extract data, either -1 or 1 
 function PlusMinus(props){
     function handle(e){
         if(e.target.id.includes('minus')){
@@ -12,6 +14,8 @@ function PlusMinus(props){
     </>);
 }
 
+
+// Used to display the state of the data
 function Data(props){
     return (<div>
         Header:  {props.data.header}, 
@@ -45,6 +49,7 @@ function read() {
 }
 
 function App(){
+    //Define the data that will hold the state of all the sections of the holy grail app
     const [data, setData]   = React.useState({header:0,left:0,article:0,right:0,footer:0});    
 
     React.useEffect(() => {
@@ -63,6 +68,7 @@ function App(){
             });
     }
 
+    //Passing the data and the function 
     return (<>
         <div className="grid">        
             <Header  handle={handle} data={data}/>
