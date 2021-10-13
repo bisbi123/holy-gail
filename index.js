@@ -1,15 +1,16 @@
 var express = require('express');
 var app     = express();
-var redis = require("redis"); 
-var client = redis.createClient(); 
+var redis = require("redis");  // Create your object
+var client = redis.createClient(); // start your redis client
 
 // serve static files from public directory
 app.use(express.static('public'));
 
 // init values
-client.mset('header',0,'left',0,'article',0,'right',0,'footer',0);
-client.mget(['header','left','article','right','footer'], 
+client.mset('header',0,'left',0,'article',0,'right',0,'footer',0); // set your key value pairs
+client.mget(['header','left','article','right','footer'], // extract the current value of any keys you pass in as list
   function(err, value) {
+    // go ahead and return the values to the corresponding positions
     console.log(value);
 });   
 
@@ -33,6 +34,8 @@ function data(){
 
 // get key data
 app.get('/data', function (req, res) {
+    // a route that shows you the current status of all the key value pairs
+    // in JSON format
     data()            
         .then(data => {
             console.log(data);
@@ -43,6 +46,9 @@ app.get('/data', function (req, res) {
 
 // plus
 app.get('/update/:key/:value', function (req, res) {
+    // allows you to modify the existing values to all the keys
+    // exmaple: type in /update/article/2 will add 2 to whatever the current
+    // value is for the article key
     const key = req.params.key;
     let value = Number(req.params.value);
     client.get(key, function(err, reply) {
