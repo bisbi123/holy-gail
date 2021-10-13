@@ -3,16 +3,16 @@ React Holy Grail - State of each column shared with the rest
 
 ## Outline
 - Browser Client
- - React: Front-end framework
- - Superagent: Help resolve Promises
+  - React: Front-end framework
+  - Superagent: Help resolve Promises
 
 - Http-Server
- - Express 
- - Node JS
+  - Express 
+  - Node JS
 
 - Data Store
- - Redis
- - Docker
+  - Redis
+  - Docker
 
 # Start App
 
