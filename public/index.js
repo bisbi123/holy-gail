@@ -37,6 +37,7 @@ function update(section, value) {
     });
 }
 
+// Read the data using a Promise
 function read() {
     return new Promise((resolve, reject) => {
         var url = '/data';

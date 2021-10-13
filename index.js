@@ -14,6 +14,7 @@ client.mget(['header','left','article','right','footer'],
 });   
 
 function data(){
+    // Packages the data nicely based on different panels 
     return new Promise((resolve, reject) => {
         client.mget(['header','left','article','right','footer'], 
             function(err, value) {
