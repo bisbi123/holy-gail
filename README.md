@@ -1,6 +1,19 @@
 # react-holygrail
 React Holy Grail - State of each column shared with the rest
 
+## Outline
+- Browser Client
+ - React: Front-end framework
+ - Superagent: Help resolve Promises
+
+- Http-Server
+ - Express 
+ - Node JS
+
+- Data Store
+ - Redis
+ - Docker
+
 # Start App
 
 ## Node
